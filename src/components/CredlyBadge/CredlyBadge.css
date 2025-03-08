@@ -1,0 +1,23 @@
+.badge-container {
+    display: flex;
+    flex-wrap: wrap; /* Esto permite que los badges se ajusten en varias filas si es necesario */
+    justify-content: space-between; /* Alinea los items con espacio entre ellos */
+    gap: 20px; /* Espacio entre cada badge */
+    padding: 20px; /* Añade un padding alrededor del contenedor */
+  }
+  
+  /* Cada badge */
+  .badge-item {
+    flex: 1 1 calc(33.333% - 20px); /* Cada item ocupa un 33% del ancho y se ajusta */
+    min-width: 150px; /* Ancho mínimo */
+    max-width: 300px; /* Ancho máximo */
+    margin-bottom: 20px; /* Añade un margen inferior para separar filas */
+  }
+  
+  /* Si el tamaño de la pantalla es pequeño, los badges ocuparán el 100% del ancho */
+  @media (max-width: 768px) {
+    .badge-item {
+      flex: 1 1 100%; /* Los badges ocuparán el 100% del ancho en pantallas pequeñas */
+    }
+  }
+  
